@@ -1,6 +1,7 @@
 "use client"
 
 import Script from "next/script"
+import { Analytics } from "@vercel/analytics/react"  // use this import for React client components
 import CallToActionWithAnnotation from "@/components/HeroSection"
 import SimpleThreeColumns from "@/components/Features"
 import SplitWithImage from "@/components/Testimonials"
@@ -26,6 +27,9 @@ export default function Home() {
       <CallToActionWithAnnotation />
       <SimpleThreeColumns />
       <SplitWithImage />
+
+      {/* Vercel Analytics tracking */}
+      <Analytics />
     </>
   )
 }
